@@ -1,5 +1,5 @@
 streamlit
 joblib
 numpy
-catboost
+catboost==1.2.7
 matplotlib
