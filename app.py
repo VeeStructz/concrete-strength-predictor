@@ -5,8 +5,6 @@ import joblib
 import matplotlib.pyplot as plt
 from io import BytesIO
 import base64
-import xlsxwriter
-
 
 # Load models and scaler
 catboost_model = joblib.load('catboost_model.pkl')
@@ -112,7 +110,7 @@ if st.button("Predict Compressive Strength"):
 
     # Export to Excel
     excel_buffer = BytesIO()
-    with pd.ExcelWriter(excel_buffer, engine='xlsxwriter') as writer:
+    with pd.ExcelWriter(excel_buffer, engine='openpyxl') as writer:
         export_df.to_excel(writer, index=False, sheet_name='Prediction')
     excel_data = excel_buffer.getvalue()
     st.download_button(
@@ -125,3 +123,4 @@ if st.button("Predict Compressive Strength"):
 # Footer
 st.markdown("---")
 st.markdown("<div style='text-align: center;'>© 2025 Ranti-Owoeye Victor | Powered by Machine Learning & Streamlit 🚀</div>", unsafe_allow_html=True)
+
