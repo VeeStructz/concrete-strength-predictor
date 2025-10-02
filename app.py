@@ -5,7 +5,6 @@ import joblib
 import matplotlib.pyplot as plt
 from io import BytesIO
 import base64
-import openpyxl
 import xlsxwriter
 
 
@@ -126,4 +125,5 @@ if st.button("Predict Compressive Strength"):
 # Footer
 st.markdown("---")
 st.markdown("<div style='text-align: center;'>© 2025 Ranti-Owoeye Victor | Powered by Machine Learning & Streamlit 🚀</div>", unsafe_allow_html=True)
+
 
