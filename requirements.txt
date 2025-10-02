@@ -1,5 +1,0 @@
-streamlit
-joblib
-numpy
-catboost==1.2.7
-matplotlib
